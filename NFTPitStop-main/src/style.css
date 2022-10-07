@@ -1,0 +1,954 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: url("./assets/spaceship.jpg") no-repeat center center/cover;
+  height: fit-content;
+  background-attachment: fixed;
+}
+
+/* ========================================NavBar===========================================*/
+.Navbar {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(185, 106, 11);
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 21px;
+  margin: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.navBar--links {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.navBar--links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.5s;
+}
+
+.navBar--links:hover::before {
+  width: 100%;
+}
+
+/* =========================================================================================*/
+/* ========================================Home Page===========================================*/
+
+.home--page {
+  /* background: url("./assets/landscape.jpg") no-repeat center center/cover; */
+  height: 93vh;
+}
+
+/* ========================================About Page===========================================*/
+
+.about--page--overview {
+  background-color: rgba(46, 45, 45, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+}
+
+.about--page--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70vw;
+  background-color: rgba(38, 38, 38, 0.7);
+  border: 2px solid black;
+  color: #f1f1f1;
+  box-shadow: 3px 3px rgba(3, 3, 3, 0.4);
+  border-radius: 5px;
+  padding-left: 1%;
+  margin-bottom: 10%;
+}
+
+.about--title--container {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  margin-bottom: 5%;
+}
+
+.about--title {
+  font-size: 3vw;
+  margin-bottom: 2%;
+}
+
+.about--subheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  width: 100%;
+}
+
+.about--subheader--content {
+  font-size: 1.2vw;
+  font-weight: 200;
+  width: 80%;
+}
+
+.instructions--container {
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.instructions--table {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 100%;
+  grid-row-gap: 10%;
+  margin-left: 2%;
+}
+
+.instructions--individual--box {
+  display: flex;
+}
+
+.instructions--individual--title {
+  font-size: 1.2vw;
+  color: #f0740d;
+  width: 30%;
+  font-weight: 800;
+}
+
+.instructions--individual--content {
+  font-size: 1vw;
+  width: 60%;
+}
+
+.about--images {
+  position: absolute;
+  display: flex;
+  bottom: 0%;
+  overflow: hidden;
+}
+.about--image--bayc {
+  width: 40%;
+  right: 10%;
+}
+.about--image--azuki {
+  position: relative;
+  left: 40%;
+  width: 30%;
+}
+
+.about--image--invisiblefriends {
+  position: relative;
+  right: 5%;
+  width: 35%;
+}
+/*=========================================NFT Page================================================*/
+
+.overview--nft--app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+}
+
+#root {
+  height: 100%;
+}
+.nft--app {
+  width: 100%;
+  height: 93vh;
+  color: rgb(255, 255, 255);
+}
+
+/* .nft--app:before {
+  content: "";
+  background: url("./assets/landscape.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+} */
+
+.search--bar {
+  margin-right: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search--input {
+  margin-top: 20px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(37, 37, 37, 0.5);
+  color: #f8f8f8;
+}
+
+.search--input:hover {
+  cursor: pointer;
+  background-color: rgb(0, 72, 255);
+  filter: invert(1);
+}
+
+.icon--search {
+  margin-top: 20px;
+  margin-left: 10px;
+  color: rgb(185, 106, 11);
+  cursor: pointer;
+  transition: ease-out;
+}
+.icon--search:hover {
+  scale: 1.25;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ==============================Right Section====================== */
+.right--section-header {
+  font-size: 2vw;
+}
+
+.right--section--container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 20%;
+  padding: 1rem;
+}
+
+/* ==============================Middle Section====================== */
+
+.middle--section--header {
+  font-size: 3vw;
+}
+
+.middle--section--container {
+  width: 60%;
+}
+
+/* ==============================Left Section====================== */
+.left-section-header {
+  font-size: 2vw;
+}
+
+.left--section--collectorDetails {
+  width: 15%;
+  padding: 1rem;
+}
+
+/* ==============================MAIN NFT Section====================== */
+
+.nft--collection {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.no--nft-collection--title {
+  background-color: rgba(46, 45, 45, 0.8);
+  font-family: "Silkscreen", cursive;
+  font-size: 3vw;
+  letter-spacing: -0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.no--nft--collection {
+  height: 50vh;
+  font-size: 3vw;
+  background: url("./assets/baycnft.png") no-repeat center center/cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft--images {
+  max-width: 100%;
+  margin-left: 0px;
+  border-radius: 15px;
+}
+
+.nft--images:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.nft--card {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 3px 3px rgba(37, 37, 37, 0.4);
+  border-radius: 15px;
+}
+
+.nft--card:hover {
+  scale: 0.95;
+}
+
+.nft--card--description--container {
+  height: 100%;
+  background-color: rgba(139, 139, 139, 0.8);
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.description-mini-headers {
+  color: #35363b;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-top: 10%;
+}
+
+.description-mini-texts {
+  color: #212123;
+  font-size: 0.8vw;
+  font-weight: 100;
+}
+
+.nft--card--description--right--container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.nft--card--description--left--container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+/* ==================================Modal Design=================================== */
+.modal--image--container {
+  width: 100%;
+}
+
+.overlay2 {
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.modalLoading--icon {
+  max-width: 100%;
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: transparent;
+  /* box-shadow: 0px 0px 20px 0px rgba(5, 5, 5, 0.8); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.modal--image {
+  height: 100%;
+  width: 100%;
+}
+
+.modal--closeButton {
+  background: transparent;
+  border: 0px solid;
+  outline: none;
+  cursor: pointer;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-left: 50px;
+  color: black;
+  position: fixed;
+  top: 3%;
+  right: 3%;
+}
+
+.modal--closeButton:hover {
+  scale: 0.8;
+  filter: invert(0.5);
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.overlay {
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.modal--container {
+  max-width: 100%;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px 0px rgba(255, 0, 0, 0.8);
+}
+
+.modal--Right {
+  width: 100%;
+}
+
+.title--box {
+  display: flex;
+  flex-direction: row;
+  color: #35363b;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.title--header {
+  font-size: 3vw;
+  font-weight: 600;
+  margin-right: 3%;
+}
+
+.modal--title {
+  font-size: 3vw;
+}
+
+.modal--nft--contract--address {
+  color: #35363b;
+  margin-left: 10%;
+  font-size: 1.2vw;
+}
+
+.modal--nft--contract--address:hover {
+  font-size: 1vw;
+  color: blueviolet;
+}
+
+.nft--description {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #35363b;
+  font-size: 1.5vw;
+  margin-top: 5%;
+  font-style: italic;
+}
+
+.modal--grid--box {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.modal--attributes--box {
+  color: #35363b;
+}
+
+.modal--attributes--box {
+  display: grid;
+  /* grid-gap: 2%; */
+  line-height: 150%;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  width: 100%;
+  justify-content: center;
+}
+
+.attri--type {
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+
+.attri--value {
+  font-size: 1.2vw;
+}
+
+.addToWatchList--Button {
+  cursor: pointer;
+  color: rgb(219, 11, 25);
+  position: fixed;
+  top: 4%;
+  left: 3%;
+}
+
+.addToWatchList--Button:hover {
+  scale: 1.25;
+}
+
+.addedToWatchList--Button {
+  cursor: pointer;
+  color: rgb(0, 255, 55);
+  position: fixed;
+  top: 4%;
+  left: 3%;
+}
+
+.addedToWatchList--Button:hover {
+  scale: 1.25;
+}
+
+/* ==================================Watch List=================================== */
+
+.watchListCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(139, 139, 139, 0.4);
+  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  margin-bottom: 5%;
+}
+
+.watchListCard:hover {
+  cursor: pointer;
+  background-color: rgb(0, 72, 255);
+  filter: invert(1);
+}
+
+.watchListCard--components {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.watchListImage {
+  width: 30%;
+}
+
+.watchListCard--Title {
+  font-size: 1vw;
+  margin-left: 5%;
+}
+
+.watchListCard--delete--button {
+  cursor: pointer;
+  color: #f1f1f1;
+  margin-right: 2%;
+}
+
+.watchListCard--delete--button:hover {
+  cursor: pointer;
+  scale: 0.95;
+  color: rgb(0, 255, 174);
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  margin-right: 2%;
+}
+
+.watchListCard--Description {
+  font-size: 0.5vw;
+}
+
+/* ========================================WATCH LIST PAGE===========================================*/
+
+.filters-bar {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters--buttons {
+  width: 70vw;
+  display: flex;
+  justify-content: right;
+}
+
+.filters--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 4vh;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(38, 38, 38, 0.7);
+  box-shadow: 3px 3px rgba(3, 3, 3, 0.1);
+  color: #f1f1f1;
+  margin-left: 5%;
+}
+.filters--button:hover {
+  cursor: pointer;
+  color: #212123;
+  background-color: #f08329;
+}
+
+.watchListPage--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual--watchListCards {
+  padding: 1rem;
+  width: 70vw;
+  background-color: rgba(38, 38, 38, 0.7);
+  height: 30vh;
+  display: flex;
+  margin-bottom: 2%;
+  border: 2px solid black;
+  color: #f1f1f1;
+  box-shadow: 3px 3px rgba(3, 3, 3, 0.4);
+  border-radius: 5px;
+  padding-left: 1%;
+  transition: width 0.5s, height 0.5s, transform 0s;
+}
+
+.individual--watchListCards:hover {
+  scale: 0.99;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: rotate(-0.5deg);
+}
+
+.individual--watchListCard--sections {
+  display: flex;
+  width: 100%;
+}
+
+.individual--watchListCard--sections:hover {
+  cursor: pointer;
+}
+
+.watchListCard--image {
+  height: 100%;
+}
+
+.watchList--title--box {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.title--header--watchList {
+  color: #f0740d;
+  font-size: 1.2vw;
+  margin-right: 0.5vw;
+  font-weight: 800;
+}
+
+.title--name--watchList {
+  font-size: 1.2vw;
+}
+
+.inidividual--watchListCard--center {
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.watchList--etherscan--text {
+  font-size: 0.8vw;
+  color: #37a2ff;
+  text-decoration: underline;
+}
+
+.watchList--etherscan--text:hover {
+  font-size: 0.9vw;
+  color: blueviolet;
+}
+
+.main--desc {
+  font-size: 0.65vw;
+}
+
+.individual--watchListCard--right {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  height: 100%;
+  font-size: 1vw;
+  /* margin-top: 1.5%; */
+  margin-left: 1.5%;
+}
+
+.statistics--right {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.statistics--left {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.price--change--30 {
+  margin-bottom: 20%;
+}
+
+.statistics--header {
+  color: #f0740d;
+  font-weight: 800;
+}
+
+.average--price--box {
+  margin-bottom: 20%;
+}
+
+.statistics--report {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price--change--30--arrow--green {
+  color: rgb(0, 250, 0);
+}
+
+.price--change--30--arrow--red {
+  color: rgb(247, 0, 0);
+}
+
+.watchListPageCard--delete--button {
+  cursor: pointer;
+  color: #f1f1f1;
+  right: 1%;
+  top: 70%;
+  position: relative;
+}
+
+.watchListPageCard--delete--button:hover {
+  cursor: pointer;
+  scale: 0.95;
+  color: rgb(255, 93, 93);
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -0.5px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-0.5px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+  40% {
+    transform: translate(0.5px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 0.5px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-0.5px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(0.5px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-0.5px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 0.5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -0.5px) rotate(-1deg);
+  }
+}
+
+.owners--minted--market--cap--box {
+  display: flex;
+}
+
+.owners--minted--market--cap--box--left {
+  margin-right: 25%;
+}
+
+.number--of--owners--box {
+  font-size: 0.8vw;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.number--of--owners--title {
+  color: #f0740d;
+  font-weight: 800;
+}
+
+.total--minted--box {
+  font-size: 0.8vw;
+  margin-top: 3%;
+}
+
+.total--minted--title {
+  color: #f0740d;
+  font-weight: 800;
+}
+
+.marketCap--box {
+  font-size: 0.8vw;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.marketCap--title {
+  color: #f0740d;
+  font-weight: 800;
+}
+
+.no--watchlist-collection--title {
+  font-family: "Silkscreen", cursive;
+  color: #f1f1f1;
+  font-size: 6vw;
+  letter-spacing: -0.5rem;
+}
+
+.no--watchlist--collection--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+.cryptopunk--image {
+  position: absolute;
+  bottom: 0%;
+  width: 20vw;
+}
+
+.cryptopunk--image2 {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 20vw;
+}
+
+/* ==============================================HOME PAGE===========================================*/
+
+.home--page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home--page--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home--page--main--title {
+  font-family: "Silkscreen", cursive;
+  color: #f1f1f1;
+  font-size: 7vw;
+  letter-spacing: -0.5rem;
+}
+
+.home--page--input--box {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  width: 100%;
+}
+
+.home--page--input {
+  width: 50%;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  height: 20%;
+}
+
+.home--page--input:hover {
+  cursor: pointer;
+  background-color: rgb(0, 72, 255);
+  filter: invert(1);
+}
+
+.home--page--icon--search {
+  margin-left: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-out;
+}
+
+.home--page--icon--search:hover {
+  margin-left: 10px;
+  color: rgb(0, 72, 255);
+  cursor: pointer;
+  transition: ease-out;
+  filter: invert(1);
+}
+
+.home--page--icon--search--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
