@@ -482,7 +482,7 @@ body {
 
 .nft--card--description--container {
   height: 100%;
-  background-color: rgba(139, 139, 139, 0.8);
+  background-color: rgba(163, 163, 163, 0.8);
   border-top: 2px solid black;
   display: flex;
   flex-direction: row;

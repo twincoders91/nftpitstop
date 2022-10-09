@@ -131,7 +131,7 @@ export default function NFT(props) {
             </div>
             <div className="container">
               <div className="left--section--collectorDetails">
-                {NFTsApp ? <h1 className="left-section-header"></h1> : ""}
+                {NFTsApp ? <h1 className="left-section-header">{""}</h1> : ""}
               </div>
               <div className="middle--section--container">
                 {NFTsApp ? (
@@ -179,7 +179,7 @@ export default function NFT(props) {
                 <br />
               </div>
               <div className="right--section--container">
-                {NFTsApp ? (
+                {watchListApp.length !== 0 ? (
                   <h1 className="right--section-header">Watch List</h1>
                 ) : (
                   ""

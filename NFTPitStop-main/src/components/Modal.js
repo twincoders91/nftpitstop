@@ -8,7 +8,6 @@ const Modal = (props) => {
   const nextNFTDetails = { ...openModalDetails, statistics };
 
   if (!props.openModal) return null;
-  console.log(nextNFTDetails);
 
   //=================heart icon to determine whether event id in Watch List Array is equal to current id=========================
   //==================returns true if similar id is found======================
