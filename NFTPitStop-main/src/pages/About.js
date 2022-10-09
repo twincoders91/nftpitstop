@@ -1,7 +1,7 @@
 import React from "react";
-import bayc from "../assets/baycnft.png";
 import azuki from "../assets/azuki.png";
 import invisibleGIF from "../assets/invisiblefriends.gif";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
@@ -16,6 +16,15 @@ const About = () => {
               adding them into your Watchlist! Information as shown below can be
               found in your Watchlist cards and are data relating to the NFT{" "}
               <b>Collection</b>.
+            </p>
+            <br />
+            <br />
+            <p>
+              Use the Wallet Address examples from the{" "}
+              <NavLink className="home--page--button" to="/">
+                Home Page
+              </NavLink>{" "}
+              to see how the App works!
             </p>
           </div>
         </div>

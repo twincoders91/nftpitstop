@@ -22,8 +22,6 @@ export default function App() {
     setWatchListApp(watchListPageArr);
   };
 
-  console.log(watchListApp);
-
   useEffect(() => {
     if (owner) {
       fetchNFTs(owner, setCollectionSize, setLoading, setNFTsApp);

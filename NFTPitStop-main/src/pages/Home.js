@@ -1,6 +1,6 @@
 import React from "react";
 import { UilSearch } from "@iconscout/react-unicons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Home = (props) => {
   let inputValue = props.inputValue;
@@ -10,6 +10,38 @@ const Home = (props) => {
   const handleClick = () => {
     setOwner(inputValue);
   };
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = "nft";
+    navigate(path);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleClick();
+      routeChange();
+    }
+  };
+
+  //=========================================NFT Examples to use for APP=========================================
+
+  const handleNFTExampleClick1 = () => {
+    setOwner("0x84dEd90C6E1F90Ab5344Ca0E86022a9Ff215D8e8");
+    routeChange();
+  };
+
+  const handleNFTExampleClick2 = () => {
+    setOwner("0xde355642A001B212e524acc5B99660a5224db9E8");
+    routeChange();
+  };
+
+  const handleNFTExampleClick3 = () => {
+    setOwner("0x28E82FB4be146d3128DC7125F8A989B2f25eAf1B");
+    routeChange();
+  };
+
+  //=============================================================================================================
 
   // 0x50F6Ce36457aF140c7fBd1F44F33820E3F15530a - Eminem
   // 0xde355642A001B212e524acc5B99660a5224db9E8 - TJH
@@ -30,6 +62,7 @@ const Home = (props) => {
             onChange={(event) => {
               setInputValue(event.target.value);
             }}
+            onKeyPress={handleKeyPress}
           />
           <NavLink className="home--page--icon--search--box" to="nft">
             <UilSearch
@@ -38,6 +71,29 @@ const Home = (props) => {
               onClick={handleClick}
             />
           </NavLink>
+        </div>
+        <div className="nft--examples--container">
+          <div className="nft--examples--header">View Random NFT Wallets</div>
+          <div className="nft--examples">
+            <button
+              className="nft--examples-buttons"
+              onClick={handleNFTExampleClick1}
+            >
+              MINT-IST
+            </button>
+            <button
+              className="nft--examples-buttons"
+              onClick={handleNFTExampleClick2}
+            >
+              TJH
+            </button>
+            <button
+              className="nft--examples-buttons"
+              onClick={handleNFTExampleClick3}
+            >
+              Ddog
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -73,6 +73,12 @@ export default function NFT(props) {
     setOwner(inputValue);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
+
   const addToWatchListClick = (watchListData) => {
     //pushing in data to an WatchList Array for population
     setWatchListApp([...watchListApp, watchListData]);
@@ -115,6 +121,7 @@ export default function NFT(props) {
                   setInputValue(event.target.value);
                 }}
                 value={inputValue}
+                onKeyPress={handleKeyPress}
               ></input>
               <UilSearch
                 size={30}
