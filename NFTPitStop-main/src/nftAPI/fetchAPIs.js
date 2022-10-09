@@ -4,14 +4,18 @@ const baseUrl =
 //================================fetching Owner's NFT array using wallet address================================================================
 //===============================================================================================================================================
 const getAddressNFTs = async (owner) => {
-  if (owner) {
-    let data;
-
-    data = await fetch(`${baseUrl}/getNFTs?owner=${owner}`).then((data) =>
-      data.json()
-    );
-    console.log(data);
-    return data;
+  try {
+    if (owner) {
+      let data;
+      data = await fetch(`${baseUrl}/getNFTs?owner=${owner}`).then((data) =>
+        data.json()
+      );
+      console.log(data);
+      return data;
+    }
+  } catch (e) {
+    console.log(e);
+    alert("Invalid Wallet Address, please try again!");
   }
 };
 

@@ -32,12 +32,12 @@ const Home = (props) => {
   };
 
   const handleNFTExampleClick2 = () => {
-    setOwner("0xde355642A001B212e524acc5B99660a5224db9E8");
+    setOwner("0x28E82FB4be146d3128DC7125F8A989B2f25eAf1B");
     routeChange();
   };
 
   const handleNFTExampleClick3 = () => {
-    setOwner("0x28E82FB4be146d3128DC7125F8A989B2f25eAf1B");
+    setOwner("0xde355642A001B212e524acc5B99660a5224db9E8");
     routeChange();
   };
 
@@ -85,13 +85,13 @@ const Home = (props) => {
               className="nft--examples-buttons"
               onClick={handleNFTExampleClick2}
             >
-              TJH
+              nutZ
             </button>
             <button
               className="nft--examples-buttons"
               onClick={handleNFTExampleClick3}
             >
-              Ddog
+              TJH
             </button>
           </div>
         </div>

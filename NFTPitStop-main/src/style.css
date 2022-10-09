@@ -69,6 +69,118 @@ body {
   height: 93vh;
 }
 
+.home--page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home--page--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home--page--main--title {
+  font-family: "Silkscreen", cursive;
+  color: #f1f1f1;
+  font-size: 7vw;
+  letter-spacing: -0.5rem;
+}
+
+.home--page--input--box {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  width: 100%;
+}
+
+.home--page--input {
+  width: 50%;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(45, 45, 45, 0.5);
+  color: #f8f8f8;
+  height: 20%;
+}
+
+.home--page--input:hover {
+  cursor: pointer;
+  background-color: rgb(0, 72, 255);
+  filter: invert(1);
+}
+
+.home--page--icon--search {
+  margin-left: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-out;
+}
+
+.home--page--icon--search:hover {
+  scale: 1.25;
+  margin-left: 10px;
+  color: rgb(0, 72, 255);
+  cursor: pointer;
+  transition: ease-out;
+  filter: invert(1);
+}
+
+.home--page--icon--search--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft--examples--container {
+  margin-top: 5%;
+  padding: 5% 5%;
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 3vw;
+  width: 100%;
+}
+
+.nft--examples--header {
+  display: flex;
+  font-family: "Gemunu Libre", sans-serif;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 120%;
+  font-weight: 200;
+  letter-spacing: 0.9vw;
+  width: 100%;
+}
+
+.nft--examples {
+  margin-top: 5%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.nft--examples-buttons {
+  font-family: "Gemunu Libre", sans-serif;
+  padding: 1% 0.5%;
+  font-size: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(45, 45, 45, 0.5);
+  color: #f8f8f8;
+  width: 25%;
+  font-weight: 100;
+}
+
+.nft--examples-buttons:hover {
+  cursor: pointer;
+  background-color: rgb(0, 72, 255);
+  filter: invert(1);
+}
+
 /* ========================================About Page===========================================*/
 
 .about--page--overview {
@@ -210,18 +322,6 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* .nft--app:before {
-  content: "";
-  background: url("./assets/landscape.jpg") no-repeat center center/cover;
-  background-attachment: fixed;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0%;
-  z-index: -1;
-} */
-
 .search--bar {
   margin-right: 0.75rem;
   margin-bottom: 1rem;
@@ -323,15 +423,28 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.no--nft-collection--title {
+.no--nft--collection--container {
+  position: fixed;
+  top: 53.5vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: rgb(33, 33, 35, 0.6);
+  height: 93vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.no--nft--collection--title {
   background-color: rgba(46, 45, 45, 0.8);
-  font-family: "Silkscreen", cursive;
+  font-family: "Gemunu Libre", sans-serif;
   font-size: 3vw;
-  letter-spacing: -0.5rem;
+  letter-spacing: 5%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 5%;
+  font-weight: 100;
+  padding: 3% 0%;
 }
 
 .no--nft--collection {
@@ -746,7 +859,6 @@ body {
   width: 40%;
   height: 100%;
   font-size: 1vw;
-  /* margin-top: 1.5%; */
   margin-left: 1.5%;
 }
 
@@ -880,17 +992,20 @@ body {
 }
 
 .no--watchlist-collection--title {
-  font-family: "Silkscreen", cursive;
+  font-family: "Gemunu Libre", sans-serif;
   color: #f1f1f1;
   font-size: 6vw;
-  letter-spacing: -0.5rem;
+  letter-spacing: 5%;
+  font-weight: 100;
 }
 
 .no--watchlist--collection--container {
+  background-color: rgb(33, 33, 35, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 88vh;
+  height: 93vh;
+  width: 100vw;
 }
 
 .cryptopunk--image {
@@ -904,116 +1019,4 @@ body {
   bottom: 0%;
   right: 0%;
   width: 20vw;
-}
-
-/* ==============================================HOME PAGE===========================================*/
-
-.home--page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home--page--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home--page--main--title {
-  font-family: "Silkscreen", cursive;
-  color: #f1f1f1;
-  font-size: 7vw;
-  letter-spacing: -0.5rem;
-}
-
-.home--page--input--box {
-  display: flex;
-  margin-top: 2%;
-  justify-content: center;
-  width: 100%;
-}
-
-.home--page--input {
-  width: 50%;
-  padding: 0.7rem 1.5rem;
-  font-size: 0.8rem;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background: rgba(45, 45, 45, 0.5);
-  color: #f8f8f8;
-  height: 20%;
-}
-
-.home--page--input:hover {
-  cursor: pointer;
-  background-color: rgb(0, 72, 255);
-  filter: invert(1);
-}
-
-.home--page--icon--search {
-  margin-left: 10px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: ease-out;
-}
-
-.home--page--icon--search:hover {
-  scale: 1.25;
-  margin-left: 10px;
-  color: rgb(0, 72, 255);
-  cursor: pointer;
-  transition: ease-out;
-  filter: invert(1);
-}
-
-.home--page--icon--search--box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nft--examples--container {
-  margin-top: 5%;
-  padding: 5% 5%;
-  background: rgba(45, 45, 45, 0.6);
-  border-radius: 3vw;
-}
-
-.nft--examples--header {
-  font-family: "Gemunu Libre", sans-serif;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 100%;
-  font-weight: 100;
-  letter-spacing: 1vw;
-  width: 100%;
-}
-
-.nft--examples {
-  margin-top: 5%;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.nft--examples-buttons {
-  font-family: "Gemunu Libre", sans-serif;
-  padding: 1% 0.5%;
-  font-size: 100%;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background: rgba(45, 45, 45, 0.5);
-  color: #f8f8f8;
-  width: 25%;
-  font-weight: 400;
-}
-
-.nft--examples-buttons:hover {
-  cursor: pointer;
-  background-color: rgb(0, 72, 255);
-  filter: invert(1);
 }

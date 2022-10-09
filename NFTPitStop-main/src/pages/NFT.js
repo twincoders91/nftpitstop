@@ -131,7 +131,7 @@ export default function NFT(props) {
             </div>
             <div className="container">
               <div className="left--section--collectorDetails">
-                {NFTsApp ? <h1 className="left-section-header">News</h1> : ""}
+                {NFTsApp ? <h1 className="left-section-header"></h1> : ""}
               </div>
               <div className="middle--section--container">
                 {NFTsApp ? (
@@ -168,10 +168,11 @@ export default function NFT(props) {
                     </div>
                   ) : (
                     <>
-                      <div className="no--nft-collection--title">
+                      <div className="no--nft--collection--title">
                         <p>enter wallet address to view NFT collection</p>
                       </div>
                       <div className="no--nft--collection" />
+                      <div className="no--nft--collection--container"> </div>
                     </>
                   )}
                 </div>
